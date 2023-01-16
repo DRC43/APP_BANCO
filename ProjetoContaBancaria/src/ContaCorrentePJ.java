@@ -13,7 +13,7 @@ public class ContaCorrentePJ extends PessoaJuridica {
     private double saldo = 10900;
 
 
-   // ----- GET E SET -----
+    // ----- GET E SET -----
 
     public int getConta() {
         return conta;
@@ -47,9 +47,6 @@ public class ContaCorrentePJ extends PessoaJuridica {
         this.agencia = agencia;
     }
 
-
-    // ----- CONSTRUCTOR -----
-
     public double getSaldo() {
         return saldo;
     }
@@ -64,11 +61,11 @@ public class ContaCorrentePJ extends PessoaJuridica {
     @Override
     public String toString() {
         return "ContaInvestimentoPJ{" +
-                "conta=" + conta +
-                ", numConta='" + numConta + '\'' +
-                ", operacao='" + operacao + '\'' +
-                ", agencia='" + agencia + '\'' +
-                ", saldo=" + saldo +
+                "Conta =" + conta +
+                ", Número da Conta ='" + numConta + '\'' +
+                ", Operação ='" + operacao + '\'' +
+                ", Agência ='" + agencia + '\'' +
+                ", Saldo =" + saldo +
                 '}';
     }
 
@@ -112,8 +109,7 @@ public class ContaCorrentePJ extends PessoaJuridica {
         System.out.println("[2] Deposito");
         System.out.println("[3] Transferencia");
         System.out.println("[4] Ver saldo");
-        System.out.println("[5] Voltar");
-        System.out.println("[6] Sair");
+        System.out.println("[5] Sair");
         System.out.println("------------");
         System.out.println();
         System.out.println("\nEscolha a operação desejada:");
@@ -148,9 +144,6 @@ public class ContaCorrentePJ extends PessoaJuridica {
             case 4:
                 verSaldo();
                 break;
-
-            case 5:
-
 
             case 6:
                 System.exit(0);

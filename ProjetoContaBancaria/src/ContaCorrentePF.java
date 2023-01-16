@@ -47,9 +47,6 @@ public class ContaCorrentePF extends PessoaFisica {
         this.agencia = agencia;
     }
 
-
-    // ----- CONSTRUCTOR -----
-
     public double getSaldo() {
         return saldo;
     }
@@ -64,11 +61,11 @@ public class ContaCorrentePF extends PessoaFisica {
     @Override
     public String toString() {
         return "ContaInvestimentoPJ{" +
-                "conta=" + conta +
-                ", numConta='" + numConta + '\'' +
-                ", operacao='" + operacao + '\'' +
-                ", agencia='" + agencia + '\'' +
-                ", saldo=" + saldo +
+                "Conta =" + conta +
+                ", Número da Conta ='" + numConta + '\'' +
+                ", Operação ='" + operacao + '\'' +
+                ", Agência ='" + agencia + '\'' +
+                ", Saldo =" + saldo +
                 '}';
     }
 
@@ -112,8 +109,7 @@ public class ContaCorrentePF extends PessoaFisica {
         System.out.println("[2] Deposito");
         System.out.println("[3] Transferencia");
         System.out.println("[4] Ver saldo");
-        System.out.println("[5] Voltar");
-        System.out.println("[6] Sair");
+        System.out.println("[5] Sair");
         System.out.println("------------");
         System.out.println();
         System.out.println("\nEscolha a operação desejada:");
@@ -150,9 +146,6 @@ public class ContaCorrentePF extends PessoaFisica {
                 break;
 
             case 5:
-
-
-            case 6:
                 System.exit(0);
 
             default:

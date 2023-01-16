@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public abstract class PessoaFisica {
+
+
+    // ----- ATRIBUTOS -----
+
     Scanner ler = new Scanner(System.in);
     private String nome;
     private String sobrenome;
@@ -9,6 +13,9 @@ public abstract class PessoaFisica {
     private String dataDeNascimento;
     private String endereco;
     private String telefone;
+
+
+    // ----- GET E SET -----
 
     public String getNome() {
         return nome;
@@ -70,22 +77,28 @@ public abstract class PessoaFisica {
 
     }
 
-    public PessoaFisica(){
+    public PessoaFisica() {
     }
+
+
+    // ----- TO STRING -----
 
     @Override
     public String toString() {
         return "PessoaFisica{" +
-                "nome='" + getNome() + '\'' +
-                ", sobrenome='" + getSobrenome() + '\'' +
-                ", cpf='" + getCpf() + '\'' +
-                ", dataDeNascimento='" + getDataDeNascimento() + '\'' +
-                ", endereco='" + getEndereco() + '\'' +
-                ", telefone='" + getTelefone() + '\'' +
+                "Nome ='" + getNome() + '\'' +
+                ", Sobrenome ='" + getSobrenome() + '\'' +
+                ", CPF ='" + getCpf() + '\'' +
+                ", Data de Nascimento ='" + getDataDeNascimento() + '\'' +
+                ", Endereço ='" + getEndereco() + '\'' +
+                ", Telefone ='" + getTelefone() + '\'' +
                 '}';
     }
 
-    public  void  imprimir (){
+
+    // ----- METODOS -----
+
+    public void imprimir() {
         System.out.println(toString());
     }
 

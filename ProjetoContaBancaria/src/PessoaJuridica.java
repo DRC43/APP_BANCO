@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public abstract class PessoaJuridica {
+
+
+    // ----- ATRIBUTOS -----
+
     Scanner ler = new Scanner(System.in);
     private String nome;
     private String sobrenome;
@@ -9,6 +13,9 @@ public abstract class PessoaJuridica {
     private String faturamento;
     private String dataDeNascimento;
     private String endereco;
+
+
+    // ----- GET E SET -----
 
     public String getNome() {
         return nome;
@@ -66,25 +73,31 @@ public abstract class PessoaJuridica {
         this.endereco = endereco;
     }
 
-    public PessoaJuridica(String CNPJ, String endereco, String telefone, String faturamento, String dataDeNascimento, String nome, String sobrenome) {
-
+    public PessoaJuridica(String CNPJ, String endereco, String telefone, String faturamento, String dataDeNascimento,
+                          String nome, String sobrenome) {
     }
 
-    public PessoaJuridica(){
+    public PessoaJuridica() {
     }
+
+
+    // ----- TO STRING -----
 
     @Override
     public String toString() {
         return "PessoaJuridica{" +
-                "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", CNPJ='" + CNPJ + '\'' +
-                ", faturamento='" + faturamento + '\'' +
-                ", dataDeNascimento='" + dataDeNascimento + '\'' +
-                ", endereco='" + endereco + '\'' +
+                "Nome ='" + nome + '\'' +
+                ", Sobrenome ='" + sobrenome + '\'' +
+                ", Telefone ='" + telefone + '\'' +
+                ", CNPJ ='" + CNPJ + '\'' +
+                ", Faturamento ='" + faturamento + '\'' +
+                ", Data de Nascimento ='" + dataDeNascimento + '\'' +
+                ", Endereço ='" + endereco + '\'' +
                 '}';
     }
+
+
+    // ----- METODOS -----
 
     public void Perguntas() {
         System.out.println("------------");

@@ -48,9 +48,6 @@ public class ContaInvestimentoPF extends PessoaFisica {
         this.agencia = agencia;
     }
 
-
-    // ----- CONSTRUCTOR -----
-
     public double getSaldo() {
         return saldo;
     }
@@ -73,19 +70,19 @@ public class ContaInvestimentoPF extends PessoaFisica {
     @Override
     public String toString() {
         return "ContaInvestimentoPF{" +
-                "conta=" + conta +
-                ", numConta='" + numConta + '\'' +
-                ", operacao='" + operacao + '\'' +
-                ", agencia='" + agencia + '\'' +
-                ", saldo=" + saldo +
-                ", contaInvestimento=" + contaInvestimento +
+                "Conta =" + conta +
+                ", Número da Conta ='" + numConta + '\'' +
+                ", Operação='" + operacao + '\'' +
+                ", Agência='" + agencia + '\'' +
+                ", Saldo=" + saldo +
+                ", Conta Investimento =" + contaInvestimento +
                 '}';
     }
 
 
     // ----- METODOS -----
 
-    public void imprimirCIPF(){
+    public void imprimirCIPF() {
         System.out.println(toString());
     }
 
@@ -130,8 +127,7 @@ public class ContaInvestimentoPF extends PessoaFisica {
         System.out.println("[3] Transferencia");
         System.out.println("[4] Investimento");
         System.out.println("[5] Ver saldo");
-        System.out.println("[6] Voltar");
-        System.out.println("[7] Sair");
+        System.out.println("[6] Sair");
         System.out.println("------------");
         System.out.println();
         System.out.println("\nEscolha a operação desejada:");
@@ -175,9 +171,6 @@ public class ContaInvestimentoPF extends PessoaFisica {
                 break;
 
             case 6:
-
-
-            case 7:
                 System.exit(0);
 
             default:

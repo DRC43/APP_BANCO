@@ -1,7 +1,7 @@
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class ContaInvestimentoPJ extends PessoaJuridica{
+public class ContaInvestimentoPJ extends PessoaJuridica {
 
 
     // ----- ATRIBUTOS -----
@@ -49,9 +49,6 @@ public class ContaInvestimentoPJ extends PessoaJuridica{
         this.agencia = agencia;
     }
 
-
-    // ----- CONSTRUCTOR -----
-
     public double getSaldo() {
         return saldo;
     }
@@ -86,7 +83,7 @@ public class ContaInvestimentoPJ extends PessoaJuridica{
 
     // ----- METODOS -----
 
-    public void imprimirCIPJ(){
+    public void imprimirCIPJ() {
         System.out.println(toString());
     }
 
@@ -100,8 +97,8 @@ public class ContaInvestimentoPJ extends PessoaJuridica{
             System.out.println("Você não tem saldo suficiente para raealizar a operação. ");
         else
             setSaldo(getSaldo() - saqueValor - saldo);
-            double saldoTotal = saqueValor - saldo;
-            System.out.println("Saque realizado no valor de R$" + saqueValor);
+        double saldoTotal = saqueValor - saldo;
+        System.out.println("Saque realizado no valor de R$" + saqueValor);
     }
 
     public void depositar(double depositarValor) {
@@ -115,8 +112,8 @@ public class ContaInvestimentoPJ extends PessoaJuridica{
             System.out.println("Você não tem saldo suficiente para raealizar a operação. ");
         else
             setSaldo(getSaldo() - transferencia - valorTransferencia);
-            System.out.println("Você transferiu R$" + transferencia + " e tera que pagar de taxa R$"
-                    + valorTransferencia);
+        System.out.println("Você transferiu R$" + transferencia + " e tera que pagar de taxa R$"
+                + valorTransferencia);
     }
 
     public void investir(double investimento) {
@@ -136,8 +133,7 @@ public class ContaInvestimentoPJ extends PessoaJuridica{
         System.out.println("[3] Transferencia");
         System.out.println("[4] Investimento");
         System.out.println("[5] Ver Saldo");
-        System.out.println("[6] Voltar");
-        System.out.println("[7] Sair");
+        System.out.println("[6] Sair");
         System.out.println("------------");
         System.out.println();
         System.out.println("\nEscolha a operação desejada:");
@@ -181,9 +177,6 @@ public class ContaInvestimentoPJ extends PessoaJuridica{
                 break;
 
             case 6:
-
-
-            case 7:
                 System.exit(0);
 
             default:
