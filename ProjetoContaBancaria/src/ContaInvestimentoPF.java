@@ -11,7 +11,6 @@ public class ContaInvestimentoPF extends PessoaFisica {
     private String operacao = "016";
     private String agencia = "09";
     private double saldo = 8500;
-    private double contaInvestimento;
 
 
     // ----- GET E SET -----
@@ -56,14 +55,6 @@ public class ContaInvestimentoPF extends PessoaFisica {
         this.saldo = saldo;
     }
 
-    public double getContaInvestimento() {
-        return contaInvestimento;
-    }
-
-    public void setContaInvestimento(double contaInvestimento) {
-        this.contaInvestimento = contaInvestimento;
-    }
-
 
     // ----- TO STRING -----
 
@@ -75,7 +66,6 @@ public class ContaInvestimentoPF extends PessoaFisica {
                 ", Operação='" + operacao + '\'' +
                 ", Agência='" + agencia + '\'' +
                 ", Saldo=" + saldo +
-                ", Conta Investimento =" + contaInvestimento +
                 '}';
     }
 
@@ -114,7 +104,6 @@ public class ContaInvestimentoPF extends PessoaFisica {
 
     public void investir(double investimento) {
         setSaldo(getSaldo() - investimento);
-        setContaInvestimento(getContaInvestimento() + investimento);
         System.out.println("Você investiu R$" + investimento);
     }
 
