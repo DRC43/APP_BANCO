@@ -82,7 +82,7 @@ public class ContaCorrentePF extends PessoaFisica {
 
     public void saque(double saqueValor) {
         if (getSaldo() < 0 || saqueValor > getSaldo())
-            System.out.println("\nVocê não tem saldo suficiente para raealizar a operação. ");
+            System.out.println("\nVocê não tem saldo suficiente para realizar a operação. ");
         else
             setSaldo(getSaldo() - saqueValor);
         System.out.println("\nSaque realizado no valor de R$" + saqueValor);
@@ -95,7 +95,7 @@ public class ContaCorrentePF extends PessoaFisica {
 
     public void transferir(double transferencia) {
         if (getSaldo() < 0 || transferencia > getSaldo())
-            System.out.println("\nVocê não tem saldo suficiente para raealizar a operação. ");
+            System.out.println("\nVocê não tem saldo suficiente para realizar a operação. ");
         else
             setSaldo(getSaldo() - transferencia);
         System.out.println("\nVocê transferiu R$" + transferencia);

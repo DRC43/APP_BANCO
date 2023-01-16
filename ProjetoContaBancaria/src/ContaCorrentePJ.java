@@ -77,28 +77,28 @@ public class ContaCorrentePJ extends PessoaJuridica {
     }
 
     public void verSaldo() {
-        System.out.println("Seu saldo atual é: " + getSaldo());
+        System.out.println("\nSeu saldo atual é: " + getSaldo());
     }
 
     public void saque(double saqueValor) {
         if (getSaldo() < 0 || saqueValor > getSaldo())
-            System.out.println("Você não tem saldo suficiente para raealizar a operação. ");
+            System.out.println("\nVocê não tem saldo suficiente para realizar a operação. ");
         else
             setSaldo(getSaldo() - saqueValor);
-        System.out.println("Saque realizado no valor de R$" + saqueValor);
+        System.out.println("\nSaque realizado no valor de R$" + saqueValor);
     }
 
     public void depositar(double depositarValor) {
         setSaldo(depositarValor + getSaldo());
-        System.out.println("O valor depositado foi R$" + depositarValor);
+        System.out.println("\nO valor depositado foi R$" + depositarValor);
     }
 
     public void transferir(double transferencia) {
         if (getSaldo() < 0 || transferencia > getSaldo())
-            System.out.println("Você não tem saldo suficiente para raealizar a operação. ");
+            System.out.println("\nVocê não tem saldo suficiente para realizar a operação. ");
         else
             setSaldo(getSaldo() - transferencia);
-        System.out.println("Você transferiu R$" + transferencia);
+        System.out.println("\nVocê transferiu R$" + transferencia);
     }
 
     public void operacao() {
@@ -122,21 +122,21 @@ public class ContaCorrentePJ extends PessoaJuridica {
         switch (operacao) {
             case 1:
                 System.out.println("Saque");
-                System.out.println("Insira o valor que deseja sacar:");
+                System.out.println("\nInsira o valor que deseja sacar:");
                 double saqueValor = ler.nextDouble();
                 saque(saqueValor);
                 break;
 
             case 2:
                 System.out.println("Deposito");
-                System.out.println("Insira o valor que deseja depositar:");
+                System.out.println("\nInsira o valor que deseja depositar:");
                 double depositarValor = ler.nextDouble();
                 depositar(depositarValor);
                 break;
 
             case 3:
                 System.out.println("Transferencia");
-                System.out.println("Insira o valor que deseja transferir:");
+                System.out.println("\nInsira o valor que deseja transferir:");
                 double transferencia = ler.nextDouble();
                 transferir(transferencia);
                 break;
