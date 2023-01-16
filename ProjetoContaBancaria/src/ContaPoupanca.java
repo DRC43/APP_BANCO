@@ -82,7 +82,7 @@ public class ContaPoupanca extends PessoaFisica {
 
     public void saque(double saqueValor) {
         if (getSaldo() < 0 || saqueValor > getSaldo())
-            System.out.println("\nVocê não tem saldo suficiente para raealizar a operação. ");
+            System.out.println("\nVocê não tem saldo suficiente para realizar a operação. ");
         else
             setSaldo(getSaldo() - saqueValor);
         this.saldo = saqueValor - saldo;
@@ -96,7 +96,7 @@ public class ContaPoupanca extends PessoaFisica {
 
     public void transferir(double transferencia) {
         if (getSaldo() < 0 || transferencia > getSaldo())
-            System.out.println("\nVocê não tem saldo suficiente para raealizar a operação. ");
+            System.out.println("\nVocê não tem saldo suficiente para realizar a operação. ");
         else
             setSaldo(getSaldo() - transferencia);
         System.out.println("\nVocê transferiu R$" + transferencia);
@@ -111,7 +111,7 @@ public class ContaPoupanca extends PessoaFisica {
 
     public void operacao() {
         System.out.println("------------");
-        System.out.println("Qual operacao deseja realizar ?");
+        System.out.println("Qual operação deseja realizar ?");
         System.out.println("------------");
         System.out.println("[1] Saque");
         System.out.println("[2] Depositar");

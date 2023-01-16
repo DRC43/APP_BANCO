@@ -114,7 +114,7 @@ public abstract class PessoaFisica {
         cpf = ler.nextLine();
         System.out.println("Informe sua data de nascimento:");
         dataDeNascimento = ler.nextLine();
-        System.out.println("Informe seu endereco:");
+        System.out.println("Informe seu endereço:");
         endereco = ler.nextLine();
         System.out.println("Informe seu telefone com DDD:");
         telefone = ler.nextLine();

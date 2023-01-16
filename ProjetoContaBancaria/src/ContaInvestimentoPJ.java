@@ -62,11 +62,11 @@ public class ContaInvestimentoPJ extends PessoaJuridica {
     @Override
     public String toString() {
         return "ContaInvestimentoPJ{" +
-                "conta=" + conta +
-                ", numConta='" + numConta + '\'' +
-                ", operacao='" + operacao + '\'' +
-                ", agencia='" + agencia + '\'' +
-                ", saldo=" + saldo +
+                "Conta =" + conta +
+                ", Número da Conta ='" + numConta + '\'' +
+                ", Operação ='" + operacao + '\'' +
+                ", Agência ='" + agencia + '\'' +
+                ", Saldo =" + saldo +
                 '}';
     }
 
@@ -78,38 +78,38 @@ public class ContaInvestimentoPJ extends PessoaJuridica {
     }
 
     public void verSaldo() {
-        System.out.println("Seu saldo atual é R$" + getSaldo());
+        System.out.println("\nSeu saldo atual é R$" + getSaldo());
     }
 
     public void saque(double saqueValor) {
         double saldo = saqueValor * 0.05;
         if (getSaldo() < 0 || saqueValor > getSaldo())
-            System.out.println("Você não tem saldo suficiente para raealizar a operação. ");
+            System.out.println("\nVocê não tem saldo suficiente para realizar a operação. ");
         else
             setSaldo(getSaldo() - saqueValor - saldo);
         double saldoTotal = saqueValor - saldo;
-        System.out.println("Saque realizado no valor de R$" + saqueValor);
+        System.out.println("\nSaque realizado no valor de R$" + saqueValor);
     }
 
     public void depositar(double depositarValor) {
         setSaldo(depositarValor + getSaldo());
-        System.out.println("O valor depositado foi R$" + depositarValor);
+        System.out.println("\nO valor depositado foi R$" + depositarValor);
     }
 
     public void transferir(double transferencia) {
         double valorTransferencia = transferencia * 0.05;
         if (getSaldo() < 0 || transferencia > getSaldo())
-            System.out.println("Você não tem saldo suficiente para raealizar a operação. ");
+            System.out.println("\nVocê não tem saldo suficiente para realizar a operação. ");
         else
             setSaldo(getSaldo() - transferencia - valorTransferencia);
-        System.out.println("Você transferiu R$" + transferencia + " e tera que pagar de taxa R$"
+        System.out.println("\nVocê transferiu R$" + transferencia + " e tera que pagar de taxa R$"
                 + valorTransferencia);
     }
 
     public void investir(double investimento) {
         setSaldo(getSaldo() - investimento);
         double valorInvestimento = investimento * 0.02;
-        System.out.println("Você investiu R$" + investimento + " e este investimento irá lhe render R$ "
+        System.out.println("\nVocê investiu R$" + investimento + " e este investimento irá lhe render R$ "
                 + valorInvestimento);
     }
 
